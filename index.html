@@ -193,6 +193,16 @@
                 </div>
             </div>
 
+			 <!-- 메인 공략 캐릭터 (노무현)설레는표정 - 위치: 우측 -->
+            <div id="char-muhyunlove" class="absolute right-[10%] sm:right-[20%] bottom-0 h-[70%] sm:h-[85%] transition-all duration-300 transform opacity-0 translate-y-10 pointer-events-none z-2">
+                <div class="h-full flex flex-col items-center justify-end">
+                    <div class="w-40 sm:w-60 h-full flex items-end justify-center relative" id="muhyun-img-wrapper">
+                        <img src="캐릭터/mc_love.png" alt="노무현" class="h-full w-auto object-contain drop-shadow-xl">
+                        <span class="absolute bottom-2 bg-amber-600 text-white text-xs font-bold px-2 py-0.5 rounded shadow">노무현</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- 이벤트 연출용 오버레이 -->
             <div id="sad-overlay" class="absolute inset-0 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-1000 flex flex-col items-center justify-center z-20">
                 <i class="fa-solid fa-skull-crossbones text-red-600 text-6xl mb-4 animate-bounce"></i>
@@ -242,8 +252,8 @@
 
         // 배경 이미지 데이터셋
         const bgImages = {
-            villageEntrance: "배경/villageEntrance.jpg",
-            villagePath: "배경/villageEntrance.jpg",
+            villageEntrance: "배경/villageEntrance.png",
+            villagePath: "배경/villageEntrance.png",
             pavilion: "배경/jungja.png",
             houseRoom: "배경/houseRoom.png",
 			houseRoomrain: "배경/houseRoom_rain.png",
@@ -252,7 +262,9 @@
             paddyField: "배경/nondu.png",
             rockCliff: "배경/owlrock.jpg",
 			rock: "배경/owl.jpg",
-            blackScreen: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop"
+            blackScreen: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
+			phone: "소품/messege.png",
+			clock: "소품/clock.png"
         };
 
         // 제공해주신 스토리 텍스트 원문 100% 반영 스크립트 데이터
@@ -445,7 +457,7 @@
                 text: "그러던 중 갑자기 비가 쏟아진다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "narration"
             },
             {
@@ -454,7 +466,7 @@
                 text: "아이고, 이게 뭐고. 오늘은 내 방에서 자라.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -464,7 +476,7 @@
                 text: "괜찮습니다. 다른 데서 자도 됩니다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -474,7 +486,7 @@
                 text: "이 밤중에 어딜 간다고 그러노. 그냥 여기 있어.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -484,7 +496,7 @@
                 text: "결국 두 사람은 한 방에서 잠을 청하게 된다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "narration"
             },
             {
@@ -493,7 +505,7 @@
                 text: "불이 꺼지고 한참 뒤.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "narration"
             },
             {
@@ -502,7 +514,7 @@
                 text: "재인아, 안 자나?",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -512,7 +524,7 @@
                 text: "아직 안 잤습니다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -522,7 +534,7 @@
                 text: "오랜만에 같이 있으니까 좋네.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -532,7 +544,7 @@
                 text: "문재인은 이불을 조금 끌어올린다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "narration"
             },
             {
@@ -541,7 +553,7 @@
                 text: "어떤 대화를 건넬까?",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "choice",
                 choices: [
                     { text: "1. \"어릴 때 이야기나 해볼까요?\" (호감도 +25)", score: 25, nextStep: 30 },
@@ -556,7 +568,7 @@
                 text: "형님, 어릴 때 제가 처음 봉하에 왔던 날 기억하세요?",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -566,7 +578,7 @@
                 text: "당연하지. 그때 자네 엄청 낯가렸잖아.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -576,7 +588,7 @@
                 text: "형님이 먼저 말을 걸어주셨잖아요.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -586,7 +598,7 @@
                 text: "그랬나? 하하. 그때부터 친해진 거 아이가.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun",
                 nextDirect: 530
@@ -597,7 +609,7 @@
                 text: "두 사람은 한참 동안 어린 시절 이야기를 나눈다. 노무현은 문재인이 잠들 때까지 이야기를 이어간다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "narration",
                 nextDirect: 43
             },
@@ -608,7 +620,7 @@
                 text: "저는 아직도 형님이 어렵습니다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -618,7 +630,7 @@
                 text: "뭐라카노? 우리가 알고 지낸 세월이 얼만데.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -628,7 +640,7 @@
                 text: "그래도 가끔은 무슨 생각을 하시는지 모르겠습니다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -638,7 +650,7 @@
                 text: "그럼 앞으로 더 많이 물어보면 되지.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun",
                 nextDirect: 531
@@ -649,7 +661,7 @@
                 text: "노무현은 피식 웃으며 문재인에게 이불을 덮어준다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "narration",
                 nextDirect: 43
             },
@@ -660,7 +672,7 @@
                 text: "형님, 혹시 저 좋아하십니까?",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -670,7 +682,7 @@
                 text: "뭐?! 갑자기 그게 무슨 소리고?",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -680,7 +692,7 @@
                 text: "그냥 궁금해서요. 훠훠.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "jaein"
             },
@@ -690,7 +702,7 @@
                 text: "아이고, 사람 놀래키는 재주가 있네. 당연히 좋아하지. 친구 아이가.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun"
             },
@@ -700,7 +712,7 @@
                 text: "노무현은 웃어넘기지만 잠시 어색한 침묵이 흐른다.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "narration",
 				nextDirect: 529
             },
@@ -710,7 +722,7 @@
                 text: "……얼른 자라.",
                 date: "2009년 5월 1일 밤",
                 location: "📍 노무현의 집 방 안",
-                bg: bgImages.houseRoom,
+                bg: bgImages.houseRoomrain,
                 type: "dialogue",
                 activeChar: "muhyun",
                 nextDirect: 43
@@ -815,7 +827,7 @@
                 location: "📍 빗속 산책로",
                 bg: bgImages.rainPath,
                 type: "dialogue",
-                activeChar: "muhyun"
+                activeChar: "muhyunlove"
             },
             {
                 step: 53,
@@ -1231,7 +1243,7 @@
                 text: "상자 안에는 번쩍이는 고급 시계가 들어 있었다.",
                 date: "2009년 5월 15일",
                 location: "📍 노무현의 집",
-                bg: bgImages.houseRoom,
+                bg: bgImages.clock,
                 type: "narration"
             },
             {
@@ -1858,7 +1870,7 @@
                 text: "그날 밤, 노무현에게서 문자가 온다.\n\n\"내일 잠깐 보자. 할 말이 있다.\"",
                 date: "2009년 5월 22일 밤",
                 location: "📍 문재인의 방",
-                bg: bgImages.houseRoom,
+                bg: bgImages.phone,
                 type: "narration"
             },
             {
@@ -1972,7 +1984,7 @@
                 location: "📍 봉하마을 산책로",
                 bg: bgImages.villagePath,
                 type: "dialogue",
-                activeChar: "muhyun"
+                activeChar: "muhyunlove"
             },
             {
                 step: 202,
@@ -1982,7 +1994,7 @@
                 location: "📍 봉하마을 산책로",
                 bg: bgImages.villagePath,
                 type: "dialogue",
-                activeChar: "muhyun"
+                activeChar: "muhyunlove"
             },
             {
                 step: 203,
@@ -2042,7 +2054,7 @@
                 location: "📍 봉하마을 산책로",
                 bg: bgImages.villagePath,
                 type: "dialogue",
-                activeChar: "muhyun"
+                activeChar: "muhyunlove"
             },
             {
                 step: 209,
@@ -2061,7 +2073,7 @@
                 location: "📍 봉하마을 산책로",
                 bg: bgImages.villagePath,
                 type: "dialogue",
-                activeChar: "muhyun"
+                activeChar: "muhyunlove"
             },
             {
                 step: 211,
@@ -2081,7 +2093,7 @@
                 location: "📍 봉하마을 산책로",
                 bg: bgImages.villagePath,
                 type: "dialogue",
-                activeChar: "muhyun"
+                activeChar: "muhyunlove"
             },
             {
                 step: 213,
@@ -2158,7 +2170,7 @@
                 location: "📍 봉하마을 산책로",
                 bg: bgImages.villagePath,
                 type: "dialogue",
-                activeChar: "muhyun"
+                activeChar: "muhyunlove"
             },
             {
                 step: 221,
@@ -2782,7 +2794,7 @@
                 bg: bgImages.rockCliff,
                 type: "dialogue",
                 activeChar: "jaeinangry"
-				nextDirect: 520,
+				nextDirect: 520
             },
             {
                 step: 520,
