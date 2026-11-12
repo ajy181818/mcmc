@@ -2793,7 +2793,7 @@
                 location: "📍 봉하마을 부엉이바위",
                 bg: bgImages.rockCliff,
                 type: "dialogue",
-                activeChar: "jaeinangry"
+                activeChar: "jaeinangry",
 				nextDirect: 520
             },
             {
@@ -2948,36 +2948,28 @@
             document.getElementById('click-prompt').classList.remove('hidden');
         }
 
-        // 모든 캐릭터 숨기기 (나레이션/선택지 전용)
+       // 모든 캐릭터 숨기기 (나레이션/선택지 전용)
         function hideAllCharacters() {
-            const jaein = document.getElementById('char-jaein');
-            const muhyun = document.getElementById('char-muhyun');
-            const simin = document.getElementById('char-simin');
-
-            [jaein, muhyun, simin].forEach(char => {
-                char.classList.add('opacity-0', 'translate-y-10');
-                char.classList.remove('opacity-100', 'translate-y-0');
+            const charIds = ['char-jaein', 'char-jaeinangry', 'char-simin', 'char-muhyun', 'char-muhyunlove'];
+            charIds.forEach(id => {
+                const char = document.getElementById(id);
+                if (char) {
+                    char.classList.add('opacity-0', 'translate-y-10');
+                    char.classList.remove('opacity-100', 'translate-y-0');
+                }
             });
         }
 
         // 특정 캐릭터만 단독 표시
         function showSingleCharacter(charId) {
             hideAllCharacters();
-            if (charId === 'jaein') {
-                const el = document.getElementById('char-jaein');
-                el.classList.remove('opacity-0', 'translate-y-10');
-                el.classList.add('opacity-100', 'translate-y-0');
-            } else if (charId === 'muhyun') {
-                const el = document.getElementById('char-muhyun');
-                el.classList.remove('opacity-0', 'translate-y-10');
-                el.classList.add('opacity-100', 'translate-y-0');
-            } else if (charId === 'simin') {
-                const el = document.getElementById('char-simin');
+            // activeChar 값('jaein', 'jaeinangry', 'simin', 'muhyun', 'muhyunlove')에 맞춰서 자동으로 id를 찾아줍니다
+            const el = document.getElementById('char-' + charId);
+            if (el) {
                 el.classList.remove('opacity-0', 'translate-y-10');
                 el.classList.add('opacity-100', 'translate-y-0');
             }
         }
-
         // 스텝 렌더링
         function renderStep() {
             const data = storyScript.find(item => item.step === currentStep);
