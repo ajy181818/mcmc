@@ -2789,7 +2789,7 @@
             {
                 step: 521,
                 speaker: "나레이션",
-                text: "(검은 화면)",
+                text: "쿵....",
                 date: "2009년 5월 23일",
                 location: "📍 ...",
                 bg: bgImages.blackScreen,
@@ -3040,6 +3040,8 @@
 
             const currentData = storyScript.find(item => item.step === currentStep);
             if (!currentData) return;
+
+			if (currentData.type === "ending") return;
 
             // 엔딩 자동 판정 트리거 체크
             if (currentData.isEndingTrigger) {
